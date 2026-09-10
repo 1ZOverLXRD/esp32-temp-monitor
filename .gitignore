@@ -7,3 +7,9 @@
 build_log.txt
 debug_env.bat
 build_esp32.bat
+
+# 参考资料（不进仓库：开发板/传感器手册、参考源码、内部设计文档）
+esp32-wroom-32_datasheet_cn.pdf
+DS18B20中文手册.pdf
+docs/
+SRC/
