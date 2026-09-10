@@ -1,0 +1,6 @@
+# ESP32TEMP 项目组件依赖声明
+# 说明：由 ESP Component Registry (components.espressif.com) 自动解析下载到 managed_components/
+dependencies:
+  espressif/ds18b20: "*"      # DS18B20 温度传感器驱动（乐鑫官方）
+  espressif/onewire_bus: "*"  # 1-Wire 总线驱动（ds18b20 的底层依赖，乐鑫官方）
+  nixy4/u8g2: "*"             # u8g2 图形库（OLED 显示用；registry 上检索确认的唯一可用组件名）

@@ -1,0 +1,16 @@
+# ESP32TEMP 默认 sdkconfig
+#
+# 烧录波特率说明（ESP-IDF v5.5.2）：
+#  - CONFIG_ESPTOOLPY_BAUD 是 v4.x 时代的 Kconfig 符号，v5.x 已移除（保留此行为 v4 兼容写法，v5 构建会静默忽略，不影响构建）。
+#  - v5.x 实际烧录波特率由 idf.py 全局参数控制：idf.py -b 1152000 flash（或用环境变量 ESPBAUD=1152000）。
+CONFIG_ESPTOOLPY_BAUD=1152000
+
+# flash 容量：WROOM-32 实际 4MB，App 分区自动扩到 3MB（消除 2MB 布局下 App 分区 0% free 告警）
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# 编译器缓存：ccache 加速重复编译（C:\Espressif\tools\ccache\4.11.2\）
+CONFIG_COMPILER_CACHE=y
+
+# Release 优化：-O2 + 关闭断言（交付/演示固件用，减小体积提升性能）
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_DISABLE=y

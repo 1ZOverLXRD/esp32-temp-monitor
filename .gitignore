@@ -1,0 +1,9 @@
+# 根目录忽略规则（双项目仓库）
+
+# 构建日志（Hermes 编译输出）
+*.log
+
+# 本地辅助脚本（Hermes 编译环境专用）
+build_log.txt
+debug_env.bat
+build_esp32.bat

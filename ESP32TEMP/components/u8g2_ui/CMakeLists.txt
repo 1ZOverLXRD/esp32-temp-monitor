@@ -1,0 +1,1 @@
+idf_component_register(SRCS "u8g2_ui.c" INCLUDE_DIRS "." REQUIRES u8g2)
